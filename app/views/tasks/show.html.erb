@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @task.content %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @task.comment %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @task.status %>
+</p>
+
+<p>
+  <strong>Timestamps:</strong>
+  <%= @task.timestamps %>
+</p>
+
+<hr>
+<%= link_to 'Back', tasks_path %> &nbsp;&nbsp;&nbsp;
+<%= link_to "Edit", edit_task_path(@task) %> &nbsp;&nbsp;&nbsp;
+<%= link_to "Delete", task_path(@task),
+ method: :delete,
+data: {confirm: 'Are you sure?'} %>
